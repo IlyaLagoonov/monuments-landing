@@ -1,0 +1,40 @@
+:root {
+  --primary-burgundy: #4a0e0e;
+  --dark-burgundy: #2d0808;
+  --accent-burgundy: #6b1515;
+  --background-black: #0a0a0a;
+  --background-accent-black: #1a1a1a;
+  --surface-black: #1a1a1a;
+  --text-light: #e5e5e5;
+  --text-muted: #999999;
+  --spacing-100: 1rem;
+  --spacing-container: 1200px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--background-black);
+  color: var(--text-light);
+}
+
+p {
+ margin-top: 0;
+ margin-bottom: var(--spacing-100);
+}
+
+
+a {
+  color: var(--accent-burgundy);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--dark-burgundy);
+ }
+}
