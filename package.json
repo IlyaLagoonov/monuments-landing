@@ -1,23 +1,30 @@
 {
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "ts-node src/server.ts",
-    "tailwind:init": "tailwindcss init -p"
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.ts --outDir dist/ssr",
+    "build": "npm run build:client && npm run build:ssr",
+    "build:server": "tsc --project tsconfig.json",
+    "build:all": "npm run build && npm run build:server",
+    "serve": "NODE_ENV=production node dist/server.js",
+    "start": "npm run build:all && npm run serve"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "@vue/server-renderer": "^3.5.23",
     "express": "^5.1.0",
-    "naive-ui": "^2.43.1",
     "sass": "^1.93.3",
     "vue": "^3.5.23",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.16",
+    "@types/express": "^5.0.5",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@types/node": "^20.0.0",
     "autoprefixer": "^10.4.21",
+    "esbuild": "^0.27.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
     "ts-node": "^10.9.2",

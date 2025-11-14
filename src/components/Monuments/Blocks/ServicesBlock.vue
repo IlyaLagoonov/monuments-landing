@@ -1,12 +1,12 @@
 <script setup lang="ts">
  import { useMonumentsPage } from "../../../composables/useMonumentsPage";
 
- import palette from '@/assets/icons/palette.svg'
- import hammer from '@/assets/icons/hammer.svg'
- import building from '@/assets/icons/building.svg'
- import shield from '@/assets/icons/shield.svg'
- import car from '@/assets/icons/car.svg'
- import clock from '@/assets/icons/clock.svg'
+ import palette from '/assets/icons/palette.svg'
+ import hammer from '/assets/icons/hammer.svg'
+ import building from '/assets/icons/building.svg'
+ import shield from '/assets/icons/shield.svg'
+ import car from '/assets/icons/car.svg'
+ import clock from '/assets/icons/clock.svg'
 
  const iconMap = {
    palette,
@@ -20,6 +20,7 @@
 </script>
 
 <template>
+  <div class="landing-container">
     <div class="services-block">
       <h2>
         Полный спектр услуг
@@ -27,22 +28,21 @@
       <p>
         От консультации и выбора памятника до установки и благоустройства места захоронения
       </p>
-        <div class="services-cards-wrapper">
-          <div v-for="(card, i) in servicesCards" :key="i" class="service-card">
-            <div class="icon-wrapper">
-              <img :src="iconMap[card.icon]" alt="icon" />
-            </div>
-            <h5 v-html="card.title"></h5>
-            <p v-html="card.text"></p>
+      <div class="services-cards-wrapper">
+        <div v-for="(card, i) in servicesCards" :key="i" class="service-card">
+          <div class="icon-wrapper">
+            <img :src="iconMap[card.icon]" alt="icon" />
           </div>
+          <h5 v-html="card.title"></h5>
+          <p v-html="card.text"></p>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
 .services-block {
-  padding: 2rem;
-
   .services-cards-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

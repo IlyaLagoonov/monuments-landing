@@ -1,27 +1,29 @@
 <script setup lang="ts">
   const objectList = [
-      'Ваганьковское кладбище',
-      'Троекуровское кладбище',
-      'Митинское кладбище',
-      'Востряковское кладбище',
-      'Химкинское кладбище',
-      'Бутовское кладбище',
-      'Новодевичье кладбище',
-      'Хованское кладбище',
-      'Николо-Архангельское кладбище',
-      'Долгопрудненское кладбище',
-      'Красногорское кладбище',
-      'Перепечинское кладбище'
-  ]
+  'Даниловское кладбище (Советский район)',
+  'Димитриевское кладбище (Тракторозаводский район)',
+  'Кирпичное кладбище (Красноармейский район)',
+  'Горьковское кладбище (Ворошиловский район)',
+  'Среднеахтубинское кладбище',
+  'Ерзовское кладбище',
+  'Городище (Городищенское кладбище)',
+  'Кладбище посёлка Южный',
+  'Кладбище посёлка ГЭС',
+  'Кладбище посёлка Водстрой',
+  'Кладбище п. Ангарский',
+  'Кладбище п. Спартановка'
+]
+
 </script>
 
 <template>
-  <div class="geography-jobs-container">
-    <h3>
+  <div class="landing-container">
+    <h2>
       Работаем на всех кладбищах города
-    </h3>
+    </h2>
     <p>
-      Осуществляем установку памятников на любых кладбищах Волгограда и Волгоградскй области. Знаем все требования и особенности каждого кладбища.
+      Выполняем установку памятников на всех кладбищах Волгограда и области.
+     <br/> Знаем особенности каждого кладбища и работаем с учётом всех требований администрации.
     </p>
 
     <div class="geography-jobs">
@@ -103,14 +105,17 @@
 </template>
 
 <style scoped lang="scss">
-.geography-jobs-container {
-  padding: 2rem;
-}
 .geography-jobs {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 16px;
   height: 600px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    height: auto;
+  }
 }
 
 .main-block ul {
@@ -131,7 +136,7 @@
       content: '✓'; /* галочка */
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 28%;
       transform: translateY(-50%);
       width: 1.2rem;
       height: 1.2rem;
@@ -153,6 +158,10 @@
   border: 1px solid var(--accent-burgundy);
   color: var(--text-light);
   padding: 16px;
+
+  @media (max-width: 768px) {
+    padding: 6px;
+  }
 
   &__header {
     display: flex;
@@ -181,6 +190,10 @@
   border: 1px solid var(--accent-burgundy);
   color: var(--text-light);
   padding: 16px;
+
+  @media (max-width: 768px) {
+    margin-top: 16px;
+  }
 
   &__header {
     display: flex;

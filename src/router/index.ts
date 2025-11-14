@@ -1,7 +1,13 @@
-import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
-import MonumentsPage from '../pages/MonumentsPage.vue'
+import { createMemoryHistory, createRouter as createVueRouter, createWebHistory } from 'vue-router'
+import MonumentsPage from "../pages/MonumentsPage.vue";
 
-export const createSSRRouter = (isServer = false) => {
-    const history = isServer ? createMemoryHistory() : createWebHistory()
-    return createRouter({ history, routes: [{ path: '/', component: MonumentsPage }] })
+
+export function createRouter() {
+    return createVueRouter({
+        history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
+        routes: [
+            { path: '/', component: MonumentsPage }
+        ]
+    })
 }
+
