@@ -19,7 +19,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1654866555003-4504470e4ba8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjZW1ldGVyeSUyMG1vbnVtZW50fGVufDF8fHx8MTc2MjQxNjY4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral");
+  background-image: url("/assets/hero.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
