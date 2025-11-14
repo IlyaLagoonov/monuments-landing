@@ -31,3 +31,4 @@ yalc.lock
 packages
 
 .env
+.vercel

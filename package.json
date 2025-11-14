@@ -4,7 +4,7 @@
     "dev": "vite",
     "build:client": "vite build",
     "build:ssr": "vite build --ssr src/entry-server.ts --outDir dist/ssr",
-    "build": "npm run build:client && npm run build:ssr && npm run build:server && echo '=== Checking files ===' && ls -la dist/ && echo '=== Server.js exists? ===' && test -f dist/server.js && echo 'YES' || echo 'NO'",
+    "build": "npm run build:client && npm run build:ssr && npm run build:server",
     "build:server": "tsc --project tsconfig.json",
     "build:all": "npm run build && npm run build:server",
     "serve": "NODE_ENV=production node dist/server.js",
