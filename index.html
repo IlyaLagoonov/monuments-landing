@@ -2,10 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Vue SSR</title>
+    <title>Стелла-2012 - Изготовление и установка памятников в Волгограде | Памятники от производителя</title>
+    <meta name="description" content="Изготовление и установка памятников в Волгограде и области. Качественные гранитные памятники от производителя. Доступные цены, гарантия 10 лет.">
+    <meta name="keywords" content="памятники Волгоград, изготовление памятников, гранитные памятники, установка памятников, памятники от производителя, надгробия">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 <body>
 <div id="app"><!--ssr-outlet--></div>
 <script type="module" src="/src/entry-client.ts"></script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Стелла-2012",
+        "description": "Изготовление и установка памятников в Волгограде",
+        "telephone": "+7 (937) 693-29-34",
+        "email": "anfisun@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "пер. Тихий, д. 12",
+            "addressLocality": "Волгоград",
+            "addressRegion": "Волгоградская область",
+            "addressCountry": "RU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 48.708048,
+            "longitude": 44.513333
+        },
+        "openingHours": "Mo-Su 09:00-18:00",
+        "priceRange": "₽₽",
+        "areaServed": "Волгоград и Волгоградская область"
+    }
+</script>
 </body>
 </html>

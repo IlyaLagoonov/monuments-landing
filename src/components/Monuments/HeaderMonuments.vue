@@ -25,7 +25,7 @@ const toggleMenu = () => {
         <li><a href="#geography">География работы</a></li>
         <li><a href="#about">О нас</a></li>
         <li><a href="#contacts">Контакты</a></li>
-        <li><a href="tel:89996290514"> 89996290514</a></li>
+        <li><a href="tel:+7 (937) 693-29-34"> +7 (937) 693-29-34</a></li>
       </ul>
 
       <div class="header__burger" @click="toggleMenu">

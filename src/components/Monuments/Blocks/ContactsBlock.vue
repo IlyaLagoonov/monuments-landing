@@ -29,9 +29,26 @@ onMounted(() => {
         <div v-if="contacts.length" class="contacts-block__contacts">
           <div  v-for="(contact, i) in contacts" :key="i" class="contacts-block__card">
             <h5>{{ contact.title }}</h5>
-            <a v-if="contact.isHref" :href="contact.type === 'tel' ? `tel:${contact.text}` : `mailto:${contact.text}`">
+
+            <!-- Для Авито -->
+            <a
+                v-if="contact.isHref && contact.type === 'link'"
+                :href="contact.href"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
               {{ contact.text }}
             </a>
+
+            <!-- Для телефона и email -->
+            <a
+                v-else-if="contact.isHref && contact.type !== 'link'"
+                :href="contact.type === 'tel' ? `tel:${contact.text}` : `mailto:${contact.text}`"
+            >
+              {{ contact.text }}
+            </a>
+
+            <!-- Для обычного текста -->
             <p v-else>{{ contact.text }}</p>
           </div>
         </div>
