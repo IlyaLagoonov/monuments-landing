@@ -4,7 +4,7 @@
     "dev": "vite",
     "build:client": "vite build",
     "build:ssr": "vite build --ssr src/entry-server.ts --outDir dist/ssr",
-    "build": "vite build --outDir dist/client && vite build --ssr src/entry-server.ts --outDir dist/ssr && tsc src/server.ts --outDir dist --target ES2022 --module ESNext --moduleResolution node --esModuleInterop --skipLibCheck",
+    "build": "npm run build:client && npm run build:ssr && npm run build:server",
     "build:server": "tsc --project tsconfig.json",
     "build:all": "npm run build && npm run build:server",
     "serve": "NODE_ENV=production node dist/server.js",
